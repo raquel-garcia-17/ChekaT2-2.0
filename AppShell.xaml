@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ChekaT2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChekaT2"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackground="#062C53">
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="50,*" Padding="10">
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="40"/>
+                <Label Grid.Column="1" Text="{Binding Title}" 
+                       TextColor="White" 
+                       FontAttributes="None"
+                       FontSize="19"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <FlyoutItem Title="Usuario 1234" Icon="usermenu.png" StyleClass="">
+        <Tab>
+            <ShellContent Route="SignIn" ContentTemplate="{DataTemplate local:SignIn}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Cursos" Icon="cursos.png">
+        <Tab>
+            <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Solicitudes" Icon="solicitudes.png">
+        <Tab>
+            <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Créditos generales" Icon="creditos.png">
+        <Tab>
+            <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Caja de ahorro" Icon="ahorro.png">
+        <Tab>
+            <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Recibos" Icon="recibos.png">
+        <Tab>
+            <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Justificaciones" Icon="justificaciones.png">
+        <Tab>
+            <ShellContent Route="Page1" ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Cerrar sesión" Icon="out.png">
+        <Tab>
+            <ShellContent Route="SignIn" ContentTemplate="{DataTemplate local:SignIn}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Dad software - recursos humanos" Icon="dad.png">
+        <Tab>
+            <ShellContent Route="SignIn" ContentTemplate="{DataTemplate local:SignIn}" />
+        </Tab>
+    </FlyoutItem>
+
+    <ShellContent
+    Title="In"
+    ContentTemplate="{DataTemplate local:SignIn}"
+    Route="SignIn" />
+
+    <ShellContent
+    Title="Up"
+    ContentTemplate="{DataTemplate local:SignUp}"
+    Route="SignUp" />
+
+    <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:HomePage}"
+    Route="HomePage"/>
+
+    <ShellContent
+    Title="Page1"
+    ContentTemplate="{DataTemplate local:Page1}"
+    Route="Page1"/>
+
+    
+</Shell>

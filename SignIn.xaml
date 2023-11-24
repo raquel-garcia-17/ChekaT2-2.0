@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChekaT2.SignIn"
+             Title="SignIn"
+             Shell.NavBarIsVisible="False"
+             xmlns:handless="clr-namespace:ChekaT2.Handlers"
+             BackgroundImageSource="background.png">
+
+    <Grid RowDefinitions="1*,8*,1*">
+        <Frame CornerRadius="10" BackgroundColor="WhiteSmoke"
+           Grid.Row="1" VerticalOptions="CenterAndExpand"
+           Margin="20,0,20,0"
+           BorderColor="Transparent">
+
+            <VerticalStackLayout Spacing="10">
+                <Image VerticalOptions="Center" Source="dad.png" HeightRequest="150" WidthRequest="150"/>
+                <Label HorizontalTextAlignment="Center" Text="Bienvenido" FontSize="15" FontAttributes="Bold" TextColor="Black" />
+
+                <Frame Padding="10" BorderColor="Black" CornerRadius="4" HeightRequest="55">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="user.png" HeightRequest="25" WidthRequest="25" />
+                        <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Usuario" PlaceholderColor="Gray" Grid.Column="1" TextColor="Black"/>
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Black" CornerRadius="4" HeightRequest="55">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="lock.png" HeightRequest="25" WidthRequest="25" />
+                        <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" Grid.Column="1" TextColor="Black" />
+                    </Grid>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="15"></Frame>
+
+                <Button CornerRadius="10" 
+                    HeightRequest="50" 
+                    Text="Ingresar" 
+                    FontSize="15" 
+                    FontAttributes="Bold" 
+                    BackgroundColor="#062C53" 
+                    TextColor="White"
+                    Clicked="TapGestureRecognizer_Tapped_For_HomePage">
+                    <Button.Shadow>
+                        <Shadow Brush="LightGray" Offset="1,15" Radius="70" Opacity="0.8" />
+                    </Button.Shadow>
+                </Button>
+
+                <Button CornerRadius="10" 
+                    HeightRequest="50" 
+                    Text="Cambiar servidor" 
+                    FontSize="15" 
+                    FontAttributes="Bold" 
+                    BackgroundColor="#E76918" 
+                    TextColor="White"
+                    Clicked="TapGestureRecognizer_Tapped_For_SignUP">
+                    <Button.Shadow>
+                        <Shadow Brush="LightGray" Offset="1,15" Radius="70" Opacity="0.8" />
+                    </Button.Shadow>
+                </Button>
+
+                <Button CornerRadius="10" 
+                    HeightRequest="50" 
+                    Text="Activar o restaurar cuenta" 
+                    FontSize="15" 
+                    FontAttributes="Bold" 
+                    BackgroundColor="#E76918" 
+                    TextColor="White"
+                    Clicked="TapGestureRecognizer_Tapped_For_SignUP">
+                    <Button.Shadow>
+                        <Shadow Brush="LightGray" Offset="1,15" Radius="70" Opacity="0.8" />
+                    </Button.Shadow>
+                </Button>
+
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="20"></Frame>
+
+                <!--Label FontAttributes="Bold" Text="¿Olvidaste tu contraseña?" TextColor="Gray" HorizontalTextAlignment="Center" /-->
+
+                <Label FontAttributes="Bold" Text="Dad software - Recursos humanos" TextColor="Black" HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+
+            <Frame.Shadow>
+                <Shadow Brush="White"
+                    Offset="10,15"
+                    Radius="70"
+                    Opacity="0.8" />
+            </Frame.Shadow>
+
+        </Frame>
+
+    </Grid>
+</ContentPage>

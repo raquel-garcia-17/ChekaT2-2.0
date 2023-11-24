@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChekaT2.SignUp"
+             xmlns:handless="clr-namespace:ChekaT2.Handlers"
+             Shell.NavBarIsVisible="False"
+             Title="SignUp"
+             BackgroundImageSource="background.png">
+
+    <Grid RowDefinitions="1*,8*,1*">
+        <Frame ZIndex="1" CornerRadius="10" BackgroundColor="WhiteSmoke"
+           Grid.Row="1" VerticalOptions="CenterAndExpand"
+           Margin="20,0,20,0"
+           BorderColor="Transparent">
+
+            <VerticalStackLayout Spacing="10">
+                <Image VerticalOptions="Center" Source="dad.png" HeightRequest="150" WidthRequest="150"/>
+                <Label Text="Activar cuenta de usuario" FontSize="26" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                <Label Text="Ingrese sus datos como se registraron en el sistema" FontSize="14" FontAttributes="Italic" TextColor="Black" HorizontalOptions="Center"/>
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="15"></Frame>
+                <Frame Padding="10" BorderColor="Black" CornerRadius="4" HeightRequest="55">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="rfc.png" HeightRequest="25" WidthRequest="25" />
+                        <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Ingrese su R.F.C." PlaceholderColor="Gray" Grid.Column="1" TextColor="Black"/>
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Black" CornerRadius="4" HeightRequest="55">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="at.png" HeightRequest="25" WidthRequest="25" />
+                        <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Ingrese su e-mail" PlaceholderColor="Gray" Grid.Column="1" TextColor="Black" />
+                    </Grid>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="15"></Frame>
+                <Button CornerRadius="10" 
+                    HeightRequest="50" 
+                    Text="Activar" 
+                    FontSize="15" 
+                    FontAttributes="Bold" 
+                    BackgroundColor="#062C53" 
+                    TextColor="White"
+                    Clicked="TapGestureRecognizer_Tapped_For_HomePage">
+                    <Button.Shadow>
+                        <Shadow Brush="LightGray" Offset="1,15" Radius="70" Opacity="0.8" />
+                    </Button.Shadow>
+                </Button>
+
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="5"></Frame>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label  FontSize="14" FontAttributes="Bold" TextColor="Gray" Text="¿Ya tienes una cuenta activa?" VerticalTextAlignment="Center" />
+                    <Label  Text="INGRESAR" FontSize="15" 
+                       FontAttributes="Bold"
+                       TextColor="#062C53" />
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn" />
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+        </Frame>
+
+    </Grid>
+</ContentPage>
